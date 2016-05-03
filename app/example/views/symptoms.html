@@ -1,0 +1,38 @@
+<div class="padding" ng-controller="SymptomsController">
+
+  <super-navbar>
+    <super-navbar-title>
+      Self-diagnosis
+    </super-navbar-title>
+  </super-navbar>
+
+<label class="item item-input item-stacked-label">
+    <span class="input-label">Age</span>
+    <input type="text" ng-model="age"/>
+</label>
+
+<label class="item item-input item-select">
+  <div class = "input-label"> Gender </div>
+
+  <select ng-model="gender">
+        <option>Female</option>
+        <option selected>Male</option>
+        <option>Other</option>
+  </select>
+</label>
+<label class="item item-input item-stacked-label">
+    <span class="input-label">Symptoms</span>
+    <input type="text" ng-model="sympotoms"/>
+</label>
+<br>
+  <br>
+<button ng-click="findDisease()" class="button button-calm">
+
+Submit
+</button>
+
+
+<!--
+<div id="searchcontrol">Loading</div>
+-->
+</div>

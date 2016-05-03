@@ -1,0 +1,19 @@
+<div class="padding" ng-controller="CompareController">
+  <super-navbar>
+    <super-navbar-title ng-bind="navbarTitle"></super-navbar-title>
+  </super-navbar>
+
+<h3>Items to compare</h3>
+
+<label class="item item-input item-stacked-label">
+      <span class="input-label">First item</span>
+      <input type="text" ng-model="firstThing"/>
+  </label>
+  
+  <label class="item item-input item-stacked-label">
+      <span class="input-label">Second item</span>
+      <input type="text" ng-model="secondThing"/>
+  </label>
+  <button ng-click="submitTrends()" class="button button-full button-calm">Submit</button>
+
+  </div>

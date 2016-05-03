@@ -1,0 +1,41 @@
+.supersonic-navbar-mock {
+  background-color: #00B5FF !important;
+  text-align: center;
+  font-weight: 600;
+}
+
+.diRow {
+}
+
+#testJJ {
+	background-image: url(/icons/food-1.svg);
+
+}
+
+.face{
+	padding: 10%;
+
+}
+.researchHeader{
+
+	text-decoration: none;
+}
+.radio-face{
+	height: 75%;
+	width: 75%;
+}
+
+.img-radio > input{ /* HIDE RADIO */
+  visibility: hidden; /* Makes input not-clickable */
+  position: absolute; /* Remove input from document flow */
+}
+.img-radio > input + img{ /* IMAGE STYLES */
+  cursor:pointer;
+  border:2px solid transparent;
+}
+.img-radio > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
+  border:2px solid #d3d3d3;
+}
+.duration-number{
+	margin-left: 20px;
+}

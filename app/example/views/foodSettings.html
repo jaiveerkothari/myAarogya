@@ -1,0 +1,69 @@
+<div class="padding" ng-controller="FoodSettingsController">
+
+  <super-navbar>
+    <super-navbar-title>
+      My Preferences
+    </super-navbar-title>
+  </super-navbar>
+
+  <div class="padding">
+    <h2>Food I eat daily</h1>
+  </div>
+
+  <div class="padding">
+    <h3>Diet Type</h1>
+  </div>
+  
+  <div>
+
+    <ul class="list">
+
+      <li class="item item-checkbox">
+         <label class="checkbox">
+           <input type="checkbox" ng-model="veg" value="veg">
+         </label>
+         Vegetarian 
+      </li>
+      <li class="item item-checkbox">
+         <label class="checkbox">
+           <input type="checkbox" ng-model="nonveg" value="non-veg">
+         </label>
+         Non-vegetarian 
+      </li>
+      <li class="item item-checkbox">
+         <label class="checkbox">
+           <input type="checkbox" ng-model="seafood" value="seafood">
+         </label>
+         Sea Food 
+      </li>
+    </ul>
+    
+  </div>
+
+  <div class="padding">
+    <h3>Cuisine preferences</h1>
+  </div>
+
+
+  <div>
+
+    <ul class="list">
+      <li ng-repeat="mc in mycuisines" class="item item-checkbox">
+         <label class="checkbox" >
+           <input type="checkbox" name="mc.name" ng-model="mc.value"> 
+         </label>
+         {{mc.name}} 
+
+      </li>
+      
+    </ul>
+    
+  </div>
+  
+
+  <div class="row">
+    <button class="button button-block button-calm" ng-click="updateSettings()">Update Preferences</button>
+    <!-- <input type="submit" id="submit" value="Submit" /> -->
+  </div>
+
+</div>

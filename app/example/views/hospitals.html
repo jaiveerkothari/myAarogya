@@ -1,0 +1,41 @@
+<div class="padding" ng-controller="HospitalController">
+
+  <super-navbar>
+    <super-navbar-title>
+      Hospitals
+    </super-navbar-title>
+  </super-navbar>
+
+<label class="item item-input item-stacked-label">
+    <span class="input-label">City</span>
+    <input type="text" placeholder="Mumbai" ng-model="city"/>
+</label>
+
+<label class="item item-input item-stacked-label">
+    <span class="input-label">Zip</span>
+    <input type="text" placeholder="022" ng-model="zip"/>
+</label>
+
+<label class="item item-input item-stacked-label">
+    <span class="input-label">Type</span>
+    <input type="text" placeholder="Eye" ng-model="type"/>
+</label>
+<br>
+<p> {{city}} </p>
+
+<br>
+  <br>
+<button ng-click="findHospital()" class="button button-calm">
+Submit
+</button>
+<!--
+<div id="searchcontrol">Loading</div>
+-->
+<div ng-repeat="hospital in hospitals" class="list card">
+<super-navigate location="example#hospitalSingle"
+ data-params-id="{{hospital.id}}">
+    <h2> {{hospital.name}}</h2>
+</super-navigate>
+</div>
+
+</div>

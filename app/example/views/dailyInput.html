@@ -1,0 +1,96 @@
+<div class="padding" ng-controller="DailyInputController" style="position:fixed; height:100% ; width:100%">
+
+  <super-navbar>
+    <super-navbar-title>
+      Daily Input
+    </super-navbar-title>
+  </super-navbar>
+
+
+<div ng-show="foodOptions.length == 0">
+  <p style="margin-top:10%; font-size:2em;">
+            LOADING...
+  </p>
+</div>
+
+<div>
+
+
+<div ng-hide="foodOptions.length == 0">
+
+
+  <div class="list">
+    <label class="item item-input item-select">
+      <span class="input-label">Food</span>
+      <select ng-options= "foodOption as foodOption.title for foodOption in foodOptions track by foodOption.id" id="dropdown" ng-model="ufood">
+      </select>
+    </label>
+
+  </div>
+
+
+  <div class="list">
+
+    <label class="item item-input item-select">
+      <div class="input-label">
+        Excercise
+      </div>
+      <select ng-model="uex">
+        <option value="running">Running</option>
+        <option value="jogging" selected>Jogging</option>
+        <option value="walking">Walking</option>
+      </select>
+    </label>
+
+    <label class="item item-input">
+      <span class="input-label" >
+        Duration (mins)
+      </span>
+      <span style="margin-left:30%; float:right">
+        <input type="number" class="duration-number" ng-model="uDur">
+      </span>
+    </label>
+    
+
+  </div>
+
+  <div class="diRow">
+    <div class="row ">
+      <div class="col"><h4>Mood</h4></div>
+    </div>
+    
+
+    <div class="row">
+      <div class="col col-33"> 
+        <label class="img-radio">
+          <input type="radio" name="moodOpt" ng-model="user1.mood" value="happy"><img src="/icons/happy.svg" class="radio-face">
+        </label>
+      </div>
+      <div class="col col-33"> 
+        <label class="img-radio">
+          <input type="radio" name="moodOpt" ng-model="user1.mood" value="ok"><img src="/icons/okface.svg" class="radio-face">
+        </label>
+      </div>
+      <div class="col col-33">
+        <label class="img-radio">
+          <input type="radio" name="moodOpt" ng-model="user1.mood" value="sad"><img src="/icons/sad.svg" class="radio-face">
+        </label>
+      </div>
+    </div>
+
+    
+
+  </div>
+
+
+  <div class="row">
+    <button class="button button-block button-calm" ng-click="submit()">Submit</button>
+    <!-- <input type="submit" id="submit" value="Submit" /> -->
+  </div>
+
+
+</div>
+
+</div>
+
+

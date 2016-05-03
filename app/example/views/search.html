@@ -1,0 +1,16 @@
+<div class="padding">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <title>Google Custom Search Element API Example</title>
+    <script src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+        google.load('search', '1', {style: google.loader.themes.BUBBLEGUM});
+        google.setOnLoadCallback(function(){
+          new google.search.CustomSearchControl().draw('cse');
+        }, true);
+    </script>
+  </head>
+  <body style="font-family: Arial;border: 0 none;">
+    <div id="cse" style="width:100%;">Loading...</div>
+  </body>
+</div>

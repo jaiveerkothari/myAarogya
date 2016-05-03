@@ -1,0 +1,19 @@
+<div ng-controller="InfoController">
+
+  <super-navbar>
+    <super-navbar-title>
+      Hospitals
+    </super-navbar-title>
+  </super-navbar>
+<p> tttt </p>
+<p>city:  {{city}} </p>
+<div ng-repeat="hos in hospitals" class="list card">
+ <super-navigate location="example#hospitalSingle"
+ data-param-id="hos.id">
+    <h2> {{hos.name}}</h2>
+  </super-navigate>
+</div>
+<!--
+<div id="searchcontrol">Loading</div>
+-->
+</div>
