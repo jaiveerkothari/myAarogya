@@ -58,7 +58,7 @@ angular
         
         supersonic.logger.log("entered submit");
 
-       // $scope.master = angular.copy(user);
+       
 
         var Food = Parse.Object.extend("Food");
         var Mood = Parse.Object.extend("Mood");
@@ -66,7 +66,7 @@ angular
 
         supersonic.logger.log("created objects");
 
-        //supersonic.logger.log(user);
+        
 
         var newFood = new Food();
         supersonic.logger.log("set food 0");
@@ -91,34 +91,31 @@ angular
 
         newFood.save(null, {
           success: function(newFood) {
-            // Execute any logic that should take place after the object is saved.
+            
             supersonic.logger.log("food saved");
           },
           error: function(newFood, error) {
-            // Execute any logic that should take place if the save fails.
-            // error is a Parse.Error with an error code and message.
+            
             supersonic.logger.log("food NOT saved");
           }
         });
         newMood.save(null, {
           success: function(newMood) {
-            // Execute any logic that should take place after the object is saved.
+            
             supersonic.logger.log("mood saved");
           },
           error: function(newMood, error) {
-            // Execute any logic that should take place if the save fails.
-            // error is a Parse.Error with an error code and message.
+            
             supersonic.logger.log("mood NOT saved");
           }
         });
         newEx.save(null, {
           success: function(newEx) {
-            // Execute any logic that should take place after the object is saved.
+           
             supersonic.logger.log("ex saved");
           },
           error: function(newEx, error) {
-            // Execute any logic that should take place if the save fails.
-            // error is a Parse.Error with an error code and message.
+            
             supersonic.logger.log("ex not saved");
           }
         });

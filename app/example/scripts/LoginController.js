@@ -1,8 +1,7 @@
 angular
   .module('example')
   .controller('LoginController', function($scope, supersonic) {
-    //Parse.initialize("9ZMoGrZm9iXcoZVZzrt3yh7AJG9GpzbvrD8JDiCz", "pKhmjvhc6hWm7FmsrNjKEvbEac1446gDvNaCEO3k");
-	//Parse.User.logOut();
+    
 	Parse.initialize("HxZKObXH6PGYX3yR0KXj1gCDHc5ON3oYWwcJXql9", "s6JNCHywzyV77o081q4qaV0reQTp0T9pKXtjKYV1");
 
 	$scope.refresh = function(){
@@ -15,8 +14,7 @@ angular
 			var user = new Parse.User();
 			user.set("username", $scope.newUser.username);
 			user.set("password", $scope.newUser.password);
-			//user.set("email", $scope.newUser.email);
-			//user.set("phone",  $scope.newUser.phone);
+			
 			user.signUp(null, {
 			success: function(user) {
 				supersonic.ui.initialView.dismiss();
@@ -48,10 +46,7 @@ angular
 	$scope.dismissInit = function(){
 		supersonic.ui.initialView.dismiss();
 	}
-	//var currentUser = Pasrse.User.current();
-	//if(currentUser){
-	//	supersonic.ui.initialView.dismiss();
-	//}
+	
 		
 	$scope.login = function(){
 		Parse.User.logOut();
