@@ -7,18 +7,11 @@ angular
     $scope.master = {};
     
 
-    $scope.ideas=[{title: "Accommodation", id: 0},
-    {title: "Adventure sports", id: 1},
-    {title: "Street Foods", id: 31},
-    {title: "Supper", id: 32},
-    {title: "Tours", id: 33},
-    {title: "Wineries", id: 34},
-    {title: "Zoo", id: 35}
-     ];
+    
 
     $scope.foodOptions =[];
 
-    $scope.selected = $scope.ideas[0];
+    
     $scope.ufood=null;
 
     supersonic.ui.views.current.whenVisible(function() {
